@@ -8,8 +8,8 @@ celery = Celery(settings.APP_NAME)
 celery.config_from_object(celeryconfig)
 # Execute task every 30 seconds
 celery.conf.beat_schedule = {
-    "task1": {
+    "kafka-read-messages-scheduled": {
         "task": "kafka.read_messages",
-        "schedule": 30.0,
+        "schedule": settings.KAFKA_READ_MESSAGES_SCHEDULE,
     }
 }
