@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     CELERY_BROKER_URL: str
     CELERY_RESULT_BACKEND: str
     # Kafka read message schedule
-    KAFKA_READ_MESSAGES_SCHEDULE: float = 60.0
+    KAFKA_READ_MESSAGES_SCHEDULE: float = 5.0
 
     class Config:
         case_sensitive = True
